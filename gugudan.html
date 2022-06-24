@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>랜덤뽑기</title>
+	<style type="text/css">
+		#container {
+			margin : 10px;
+			height : 40px;
+			border : 1px solid black;
+			padding : 5px;
+			border-radius : 0.5em;
+		}
+		#title {
+			position : relative;
+			top : -11px;
+			background-color: white;
+			width : 350px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function gugudan() {
+			/* id 기준으로 Value을 받아옴 */
+			let dan = document.getElementById("dan");
+			/* 저장할 dom 객체 생성 */
+			let output = document.getElementById("output");
+			
+			/* 다른 구구단 입력하기를 눌렀을때 기존 내용 초기화 */
+			output.innerHTML = "";
+			for(let i=2; i<10; i++) {
+				/* 반복문을 통해 구구단 내용 입력 */
+				output.innerHTML += dan.value +"*"+i+" = "+(dan.value*i)+"<br/>"
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="title">원하는 구구단을 입력하고 화면에 출력합니다.</div>
+		<div>
+			<input type="text" id="dan"/>
+			<input type="button" value="출력" onclick="gugudan()"/>
+		</div>
+	</div>
+	<div id="output">
+	
+	</div>
+</body>
+</html>
