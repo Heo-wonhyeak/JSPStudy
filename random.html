@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>랜덤뽑기</title>
+	<style type="text/css">
+		#container {
+			margin : 10px;
+			height : 40px;
+			border : 1px solid black;
+			padding : 5px;
+			/* 모서리 라운드 */
+			border-radius : 0.5em;
+		}
+		#title {
+			position : relative;
+			top : -11px;
+			background-color: white;
+			width : 260px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function fn_create() {
+			let input = document.getElementById("input");
+			/* parseInt - 정수로 변환 */
+			input.value = (parseInt)((Math.random())*20+1)
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="title">1~20까지의 숫자중 랜덤으로 생성하시오</div>
+		<div>
+			출력 : <input id="input" type="text" />
+			<input type="button" onclick="fn_create()" value="생성"/>
+		</div>
+	</div>
+</body>
+</html>
