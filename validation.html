@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>유효성 검증</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		/* 시작시 준비 */
+		$(document).ready(function() {
+			/* form이 전송(submit)될때 익명함수 실행 */
+			$('#form').submit(function (){
+				/* id값을 받아와 val() 안에 입력된 내용 체크 */
+				if($('#userId').val() == "") {
+					alert("아이디를 입력해주세요")
+					$('#userId').focus()
+					return false
+				}	
+				if($('#userPw').val() == "") {
+					alert("비밀번호를 입력해주세요")
+					$('#userPw').focus()
+					return false
+				}
+				if($('#userPwChk').val() == "") {
+					alert("비밀번호 확인을 입력해주세요")
+					$('#userPwChk').focus()
+					return false
+				}
+				/* 비밀번호와 비밀번호 체크가 맞는지 유효성 검증 */
+				if($('#userPw').val() != $('#userPwChk').val()) {
+					alert("비밀번호가 다릅니다.")
+					$('#userPw').focus()
+					return false
+				}
+				if($('#userName').val() == "") {
+					alert("이름을 입력해주세요")
+					$('#userName').focus()
+					return false
+				}
+				if($('#birth').val() == "") {
+					alert("생년월일을 입력해주세요")
+					$('#birth').focus()
+					return false
+				}
+				/* 성별 입력된 값 받아오기 */
+				let gender = $('input[name=gender]:checked').val();
+				/* 입력값이 남자가 아닐때 */
+				if(gender != 'man') {
+					/* 입력값이 여자도 아닌경우 즉 아무것도 입력하지 않은 경우 */
+					if(gender != 'woman') {
+						alert("성별을 선택해주세요")
+						return false
+					}
+				}
+				if($('#email').val() == "") {
+					alert("이메일을 입력해주세요")
+					$('#email').focus()
+					return false
+				}
+				if($('#addr').val() == "") {
+					alert("주소를 입력해주세요")
+					$('#addr').focus()
+					return false
+				}
+				if($('#call1').val() == "") {
+					alert("연락처1을 입력해주세요")
+					$('#call1').focus()
+					return false
+				}
+			})
+		})
+	</script>
+</head>
+<body>	
+	<form id="form" action="" >
+		<table border="1">
+			<tr>
+				<td>사용자 ID</td>
+				<td><input type="text" id="userId"/></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" id="userPw"/></td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td><input type="password" id="userPwChk"/></td>
+			</tr>
+			<tr>
+				<td>사용자 이름</td>
+				<td><input type="text" id="userName"/></td>
+			</tr>
+			<tr>
+				<td>*생년월일</td>
+				<td><input type="text" id="birth"/></td>
+			</tr>
+			<tr>
+				<td>*성별</td>
+				<td>
+					<input type="radio" id="man" name="gender" value="man"/>남자
+					<input type="radio" id="woman" name="gender" value="woman" />여자
+				</td>
+			</tr>
+			<tr>
+				<td><b>*사용자 이메일</b></td>
+				<td><input type="text" id="email"/></td>
+			</tr>
+			<tr>
+				<td><b>*사용자 주소</b></td>
+				<td><input type="text" id="addr"/></td>
+			</tr>
+			<tr>
+				<td><b>*사용자 연락처1</b></td>
+				<td><input type="text" id="call1"/></td>
+			</tr>
+			<tr>
+				<td><b>*사용자 연락처2</b></td>
+				<td><input type="text" id="call2" /></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<button id="join">가입완료</button>
+					<button type="reset">다시 입력</button>
+					<button>가입안함</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
