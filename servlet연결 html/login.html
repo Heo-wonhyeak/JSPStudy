@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>로그인</title>
+	</head>
+	<body>
+	<!-- form 태그 
+		1) method : 데이터를 전송할 때 전송 방법을 지정함. GET 또는 POST로 지정함.(default : GET)
+		2) action : 데이터를 전송할 서블릿이나 JSP를 지정함. 서블릿으로 전송할 때는 매핑 이름을 사용함.
+	  -->
+	<!-- 
+		action="login" 입력된 데이터를 서블릿 매핑 이름이 login인 서블릿으로 전송함
+		name="user_id" 텍스트 박스에 입력된 id를 user_id로 전송함
+		name="user_pw" 텍스트 박스에 입력된 pw를 user_pw로 전송함
+	 -->
+		<form name="frmLogin" action="login2" method="get" enctype="utf-8">
+			아이디 : <input type="text" name="user_id"/> <br/>
+			비밀번호 : <input type="text" name="user_pw" /> <br/>
+			<input type="submit" value="login"/>
+			<input type="reset" value="cancle"/>
+		</form>
+	</body>
+</html>

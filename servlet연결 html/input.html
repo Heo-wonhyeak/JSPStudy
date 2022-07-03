@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>여러가지 값 전송</title>
+	</head>
+	<body>
+		<form name="frmInput" method="get" action="input2">
+			아이디 : <input type="text" name="user_id"/> <br/>
+			비밀번호 : <input type="text" name="user_pw" /> <br/>
+			
+			<!-- name 속성이 모두 subject로 같음 -->
+			<input type="checkbox" name="subject" value="JSP" checked/>JSP
+			<input type="checkbox" name="subject" value="Spring" />Spring
+			<input type="checkbox" name="subject" value="Android" />Android
+			<input type="checkbox" name="subject" value="AWS" />AWS
+			<br/><br/>
+			
+			<!-- 전송을 클릭하면 매핑 이름이 action에 설정한 input 서블릿으로 전송 -->
+			<input type="submit" value="전송" />
+			<input type="reset" value="초기화" />
+		</form>
+	</body>
+</html>

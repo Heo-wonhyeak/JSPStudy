@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Post방식으로 서블릿에 요청</title>
+	</head>
+	<body>
+		<form name="frmLogin" action="/chap02_Sevelt/loginTest2" method="post" enctype="utf-8">
+			<!-- 텍스트 박스에 입력한 ID를 name속성인 user_id로 전송함 -->
+			아이디 : <input type="text" name="user_id"/> <br/>
+			<!-- 텍스트 박스에 입력한 PW를 name속성인 user_pw로 전송함 -->
+			비밀번호 : <input type="text" name="user_pw" /> <br/>
+			<br/>
+			<input type="submit" value="login"/>
+			<input type="reset" value="cancle"/>
+		</form>
+	</body>
+</html>
