@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>chap08_JSP</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 오라클 DB 접속 정보 : 초기화 매개변수로 입력 -->
+	<context-param>
+		<param-name>OracleDriver</param-name>
+		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleUrl</param-name>
+		<param-value>jdbc:oracle:thin:@db202204191820_high?TNS_ADMIN=/Users/hwh/sqlworkspace/DBeaver/Wallet_DB202204191820</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OracleID</param-name>
+		<param-value>ADMIN</param-value>
+	</context-param>
+	<context-param>
+		<param-name>OraclePWD</param-name>
+		<param-value>Gjdnjsgur02@</param-value>
+	</context-param>
+</web-app>
