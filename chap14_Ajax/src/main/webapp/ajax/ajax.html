@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>ajax 테스트</title>
+	<script type="text/javascript">
+		function fnProcess() {
+			$.ajax({
+				type : "get",
+				dataType : "text",	/* 응답 데이터를 텍스트로 지정 */
+				url : "http://localhost:8080/chap14_Ajax/ajaxLab",	/* 전송할 서블릿 지정 */
+				data : {param : "Hello, jQuery!" },	/* 서버로 매개변수와 값을 설정 */
+				success : function(data,textStatus) {
+					$('#message').append(data)	/* 서버 응답 메시지를 div 엘리먼트에 표시함 */
+				},
+				error : function(data,textStatus) {
+					alert("에러발생했습니다!")		/* 작업중 오류 발생했을 경우 수행할 작업 */	
+				},
+				complete : function(data,textStatus) {
+					alert("작업을 완료했습니다.")	 	/* 완료시 수행할 작업 설정 */
+				}
+			})
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="전송하기" onclick="fnProcess()" />
+	<div id="message"></div>
+</body>
+</html>

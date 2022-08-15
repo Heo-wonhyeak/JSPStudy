@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ajax 테스트 - 아이디 중복 체크</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function fnProcess() {
+			let _id = $("#tId").val();
+			if(_id == '') {
+				alert("아이디를 입력하세요")
+				return
+			} 
+			
+			$.ajax({
+				type : "post",
+				url : "http://localhost:8080/chap14_Ajax/mem",
+				dataType : "text",
+				data: {id: _id},	/* id를 서블릿으로 전송함 */
+				success: function(data,textStatus) {	/* 서버에서 전송된 결과에 따라 메시지 표시 */
+					if(data == 'usable') {
+						$('#message').text('사용할수 있는 ID입니다.')
+						$('#btnChkID').prop("disabled",true)	/* 버튼을 비활성화 시킴 */
+					} else {
+						$('#message').text('사용할수 없는 ID입니다.')
+					}
+				},
+				error : function(data,textStatus) {
+					alert("에러가 발생했습니다.")
+				},
+				complete: function(data,textStatus) {
+					alert("작업을 완료했습니다.")
+				}
+			})
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="tId" autofocus/>
+	<input type="button" id="btnChkID" value="ID 중복체크하기" onclick="fnProcess()" />
+	<div id="message"></div>
+</body>
+</html>

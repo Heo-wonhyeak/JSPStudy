@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>ajax 테스트</title>
+	<script type="text/javascript">
+		function fnProcess() {
+			$.ajax({
+				type : "post",
+				url : "http://localhost:8080/chap14_Ajax/ajaxLab02",
+				dataType: "xml", 	/* 데이터를 XML 형태로 받음 */
+				success : function(info,textStatus) {
+					$(info).find("book").each(function(){
+						
+						let title = $(this).find("title").text();
+						let writer = $(this).find("writer").text();
+						let image = $(this).find("image").text();
+						
+						$("#bookInfo").append(
+							"<p>" + title +"</p>" +
+							"<p>" + writer +"</p>" +
+							"<img src="+image+" />"
+						)
+					})
+				},
+				/* error : function(info,textStatus) {
+					alert("에러입니다.")
+				},
+				complete : function(info,textStatus) {
+					alert("성공했습니다.")
+				}
+					 */			
+			})
+		}
+	</script>
+</head>
+<body>
+	<div id="bookInfo"></div>
+	<input type="button" value="도서정보 요청" onclick="fnProcess()"/>
+	<img src="" alt=""/>
+</body>
+</html>
