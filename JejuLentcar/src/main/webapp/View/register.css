@@ -1,0 +1,77 @@
+@charset "UTF-8";
+*{
+	margin: 0 auto;
+}
+/* Header CSS */
+ul {
+	list-style:none;
+	display : inline-block;
+}
+li {
+	float : left;
+}
+#UserBar{
+	float: right;
+	padding-right: 50px;
+}
+#topMenuBar {
+	background-color:#E6E6E6;
+	border-bottom: 1px solid #D8D8D8;
+	border-top : 1px solid #D8D8D8;
+	padding : 10px 0; 
+}
+#call_center,#Home,#Kakao{
+	display : inline-block;
+	padding : 30px;
+	position : relative;
+	left : 28%;
+}
+/* Nav CSS */
+#navBar{
+	background-color: #04B431;
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+#nav{
+	display : table;
+}
+.font_white{
+	color:#FFFFFF;
+}
+/* register */
+.left-padding {
+	padding-left : 15px;
+	padding-bottom:10px;
+}
+.td_left { 
+	background-color: #E6E6E6;
+	width : 10%;
+}
+.td_right,.td_left{
+	padding : 10px;
+	border-bottom : 1px solid #E6E6E6;
+}
+.td_right {
+	width : match;
+}
+#border-top {
+	border-top: solid;
+}
+#button {
+	margin : 30px;
+	text-align : center;
+}
+#green-white{
+	padding : 10px 20px;
+	border-radius : 0.2em;
+	border : 0px;
+	background-color: #BCF5A9;
+	color : #FFFFFF;
+}
+#white-green{
+	padding : 10px 33px;
+	border-radius : 0.2em;
+	border: solid 1px #BCF5A9;
+	background-color: #FFFFFF;
+	color: #BCF5A9;
+}

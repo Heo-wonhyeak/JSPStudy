@@ -1,0 +1,113 @@
+@charset "UTF-8";
+*{
+	margin: 0 auto;
+}
+/* Header CSS */
+ul {
+	list-style:none;
+	display : inline-block;
+}
+li {
+	float : left;
+}
+#UserBar{
+	float: right;
+	padding-right: 50px;
+}
+#topMenuBar {
+	background-color:#E6E6E6;
+	border-bottom: 1px solid #D8D8D8;
+	border-top : 1px solid #D8D8D8;
+	padding : 10px 0; 
+}
+#call_center,#Home,#Kakao{
+	display : inline-block;
+	padding : 30px;
+	position : relative;
+	left : 28%;
+}
+/* Nav CSS */
+#navBar{
+	background-color: #04B431;
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+#nav{
+	display : table;
+}
+.font_white{
+	color:#FFFFFF;
+}
+/* Section CSS */
+#sectionTitle{
+	padding-left: 28%;
+}
+#newSale{
+	letter-spacing:-0.06em; font-size:24px; margin:0 0 10px 0;
+}
+#newSaleExplanation{
+	font-size:12px; font-weight:normal; margin-left:10px; padding-left:10px; 
+	color:#777; border-left:#ccc 1px solid; letter-spacing:normal;
+}
+#sectionTitle,#sweep {
+	display : inline-block;
+}
+#sweep {
+	float : right;
+	padding-right : 28%;
+	
+}
+.picture {
+	padding : 10px;
+}
+#lentCar{
+	display : table;
+}
+#wrap-contents{
+	display : table;
+	background-color: #E0F8E6;
+}
+/* article CSS */
+#article {
+	display: table;
+}
+#wrapReservation{
+	display : inline-block;
+	padding : 10px;
+	border : 1px solid #04B45F;
+	margin-top: 20px;
+}
+#reservationTitle{
+	display : inline-block;
+}
+#plus{
+	display : inline-block;
+	color:#04B45F;
+}
+.dotList{
+	list-style: disc;
+}
+.dotListUL {
+	display:block;
+}
+#wrapNotice{
+	display : inline-block;
+	padding : 10px;
+	border : 1px solid #04B45F;
+	margin-top: 20px;
+}
+.grey{
+	color:grey;
+}
+#wrapArticle{
+	width : 60%;
+}
+#footer{
+	display : table;
+	padding : 50px 10px;
+	width : 60%;
+	background-color: #E6E6E6;
+}
+p{
+	text-align: center;
+}
