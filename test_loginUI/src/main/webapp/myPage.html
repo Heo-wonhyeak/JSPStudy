@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel ="stylesheet" href="loginWrite.css"/>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script type="text/javascript">
+  		function fn_latterbox() { 
+			window.open("messageBox.html", "a", "width=1000, height=500, left=100, top=50");
+		}
+  		function fn_secession() {
+  			let letterfrm = document.letterfrm
+  			letterfrm.method="get"
+  			letterfrm.action="secession.html"
+  			letterfrm.submit()
+  		}
+  	</script>
+	<title>마이페이지</title>
+</head>
+<body>
+	<div id="bold">마이페이지</div>
+	<div class="right">
+			<button class="white" onclick="fn_latterbox()">쪽지함</button> 
+			<input type="button" value="회원정보 수정" class="white"/>
+		<form action="secession.html" name="letterfrm" id="secession">
+			<input type="button" value="회원탈퇴" class="green" onclick="fn_secession()"/>
+		</form>
+	</div>
+	<table bordercolor="#E6E6E6">
+		<tr>
+			<td class="item">보유포인트</td>
+			<td class="value">1100점</td>
+			<td class="item">보유쿠폰</td>
+			<td class="value">1</td>
+		</tr>
+		<tr>
+			<td class="item">연락처</td>
+			<td class="value">미등록</td>
+			<td class="item">E-mail</td>
+			<td class="value">ezenac@naver.com</td>
+		</tr>
+		<tr>
+			<td class="item">최종접속일시</td>
+			<td class="value">2022-03-10 00:05:52</td>
+			<td class="item">회원가입일시</td>
+			<td class="value">2021-09-26 21:33:16</td>
+		</tr>
+		<tr>
+			<td class="item">주소</td>
+			<td class="value" colspan="3">0</td>
+		</tr>
+	</table>
+	<br/>
+	<div class="bold">최근 예약내역</div>
+	<table class="reservation">
+		<tr>
+			<td class="history">예약 번호</td>
+			<td class="history">예약 일시</td>
+			<td class="history">상품수</td>
+			<td class="history">예약금액</td>
+			<td class="history">입금액</td>
+			<td class="history">미입금액</td>
+			<td class="history">상태</td>
+		</tr>
+		<tr>
+			<td class="reservHis" rowspan="5" colspan="7">예약 내역이 없습니다</td>
+		</tr>
+	</table>
+	<br/>
+	<div class="bold">최근 위시 리스트</div>
+	<table class="reservation">
+		<tr>
+			<td class="history">이미지</td>
+			<td class="history">상품명</td>
+			<td class="history">보관일시</td>
+		</tr>
+		<tr>
+			<td class="reservHis" rowspan="5" colspan="3">보관 내역이 없습니다</td>
+		</tr>
+	</table>
+</body>
+</html>

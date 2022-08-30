@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   		<link rel ="stylesheet" href="loginWrite.css"/>
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<title>쪽지 보내기</title>
+	</head>
+	<body>
+		<h3>쪽지보내기</h3>
+		<ul>
+			<li class="latter">받은쪽지</li>
+			<li class="latter">보낸쪽지</li>
+			<li class="latter">쪽지쓰기</li>
+		</ul>
+		<h3>쪽지쓰기</h3>
+		<table class="reservation">
+			<tr class="bottom_line">
+				<td rowspan="2" class="latter_bold">받는 회원아이디</td>
+				<td ><input type="text" class="sendid"/></td>
+			</tr>
+			<tr class="bottom_line">
+				<td>여러회원에게 보낼때는 컴마(,)로 구분하세요</td>
+			</tr>
+			<tr class="bottom_line">
+				<td class="latter_bold">내용</td>
+				<td><textarea rows= "10" cols="100" class="letter_contents"></textarea></td>
+			</tr>
+		</table>
+		<br/>
+		<div class="center">
+			<form action="sendLatter.html">
+				<input type="submit" value="보내기" class="sendbtn"/>
+				<input type="button" value="창닫기" class="closeBtn" onclick="window.close()"/>
+			</form>
+		</div>
+	</body>
+</html>

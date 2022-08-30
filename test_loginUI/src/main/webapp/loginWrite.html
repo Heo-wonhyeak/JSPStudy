@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel ="stylesheet" href="loginWrite.css"/>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function() {
+        	$('#login').keypress(function (e) {
+				if(e.keyCode === 13) {
+					fn_sign_in();
+				}
+			});	//엔터키 실행
+		});
+  		function fn_sign_in() {
+  			let frmlogin = document.frmlogin
+			let id = frmlogin.userId.value
+			let pw = frmlogin.userPw.value
+			
+			if(id.length == 0 || id=="") {
+				alert("아이디를 입력해주세요")
+			} else if(pw.length == 0 || pw=="") {
+				alert("비밀번호를 입력해주세요")
+			} else if(id=="ezen" && pw=="0824") {
+				frmlogin.method = "post"		
+				frmlogin.action = "loginSucess.html"
+				frmlogin.submit()
+			} else {
+				alert("아이디와 비밀번호를 확인하세요")
+			}
+		}
+  		function find_idpw() { 
+  			window.open("findMemberInfo.html", "a", "width=400, height=300, left=100, top=50");
+  		}
+  		function signUp() {
+  		  location.replace("memberWriteSub.html");
+  		}
+  		function declaration() {
+  			window.open("declaration.html","a","width=400, height=300, left=100, top=50")
+  		}
+  	</script>
+	<title>로그인 창</title>
+</head>
+<body>
+	<h2>로그인</h2>
+	<div id="login_frm">
+		<form action="loginSucess.html" method="post" name="frmlogin" id="login">
+			회원 아이디 <input type="text" name="userId" id="user_id" autofocus/><br/>
+			비밀번호 <input type="password" name="userPw" id="user_pw" />
+			<input type="button" name="login" id="login_btn" value="로그인" onclick="fn_sign_in()"/><br/>
+			<input type="checkbox"/> 자동로그인
+		</form>
+	</div>
+	<div id="login_info">
+		<div class="bord">회원로그인 안내</div>
+		<p>회원아이디 및 비밀번호가 기억 안나실 때는 아이디/비밀번호 찾기를 이용해 주십시오. <br/>
+			아직회원이 아니시라면 회원으로 가입 후 이용해 주십시오</p><br/>
+		<button name="idPwFind" id="find_btn" onclick="find_idpw()">아이디 비밀번호 찾기</button>
+		<input type="button" name="signUp" id="sign_up_btn" value="회원 가입" onclick="signUp()"/>
+	</div>
+	<form action="main.html" method="get">
+		<input type= "submit" id="return" value ="메인으로 돌아가기"/>
+	</form>
+	<button name="declaration" id="declaration_btn" onclick="declaration()">신고하기</button>
+</body>
+</html>

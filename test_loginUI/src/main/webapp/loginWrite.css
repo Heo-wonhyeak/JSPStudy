@@ -1,0 +1,175 @@
+@charset "UTF-8";
+div#login_frm {
+	border : 1px solid #A4A4A4;
+	padding : 30px 30px;
+	width : 400px;
+	height : 100px;
+}
+div#login_info{
+	border : 1px solid #A4A4A4;
+	padding : 5px 30px;
+	width : 400px;
+	height : 200px;
+	background-color: #E6E6E6;
+}
+input#login_btn{
+	background-color: #00FF80;
+	width : 50px;
+	height : 50px;
+	color: white;
+	border : 0px;
+	border-radius: 8px;
+	position : absolute;
+	left :290px;
+	top : 96px;
+}
+.center {text-align:center;}
+#return {
+	border : 0px solid;
+	background-color: white;
+	width : 462px;
+	height : 50px;
+	padding : 0px 50px;
+}
+#login_info #find_btn {
+	background-color: #00FF80;
+	color: white;
+	border : 0px;
+	text-align: right;
+	position :relative;
+	left : 200px;
+}
+#login_info #sign_up_btn {
+	background-color: white;
+	color: #00FF80;
+	border : 1px solid 00FF80;
+	text-align: right;
+	position : relative;
+	left:200px;
+}
+#finder_sub{ border-bottom: solid 1px black; }
+div#popup{
+	width : 400px;
+	height : 200px;
+}
+div#btnContainer{
+	position:relative;
+	top : 10px;
+	height : 30px;
+}
+#emailSubmit{
+	background-color: #00FF80;
+	color: white;
+	border : 0px;
+	width : 80px;
+	height : 30px;
+	border-radius: 5px;
+}
+#closeBtn{
+	background-color: #0B2161;
+	color: white;
+	border : 0px;
+	height : 30px;
+}
+#email {width : 300px;}
+#warning{color : red; font-size:small; text-align: center;}
+.centerBord{text-align: center;}
+.chk{text-align: right; font-size:x-small;}
+.terms{width:100%;}
+#sign_up_btn2{
+	background-color: #00FF80;
+	width : 100px;
+	height : 30px;
+	color: white;
+	border : 0px;
+	border-radius: 8px;
+	text-align: center;
+}
+.item{font-weight:bold; width : 100px; background-color: #D8F6CE;}
+.value{width : 500px; background-color: #D8F6CE;}
+#bold{position : relative; left : 30px; font-weight: bold; float:left; padding: 5px;}
+div.right{text-align: right; padding : 5px; float:right; display:inline;}
+table{width:100%;}
+.white{
+	background-color: white;
+	color : #00FF80;
+	border : 1px solid #00FF80;
+	display:inline;
+}
+.green{
+	background-color: #00FF80;
+	color : white;
+	border : 1px solid #00FF80;
+}
+.bold{font-weight:bold;}
+.history{
+	font-weight:bold;
+	text-align:center;
+	background-color: #D8D8D8;
+}
+.reservation{
+	border-bottom: 1px solid #D8D8D8;
+	border-top: 2px solid black;
+}
+.reservHis{
+	height : 200px;
+	text-align: center;
+}
+ul{
+	display : table; 
+	list-style: none;
+	background-color: black;
+	width : 96%;
+}
+.latter{
+	float:left;
+	padding:5px;
+	color:white;
+	background-color: black;
+}
+.closeBtn{
+	height : 30px;
+	background-color : #0A2A12;
+	color: white;
+}
+.bottom_line{
+	border-bottom: solid 1px #BDBDBD;
+}
+.latter_bold{
+	font-weight: bold;
+	background-color: #D8D8D8;
+	width : 230px;
+	padding : 0px 5px;
+}
+.sendid{
+	background: #D8D8D8;
+	width : 400px;
+}
+.letter_contents{
+	background-color: #D8D8D8;
+}
+.sendbtn{
+	background-color : #00FF80;
+	color : white;
+	border-radius: 8px;
+	border : 0px;
+	height : 30px;
+	width : 100px;
+}
+#Email {
+	position: relative;
+	top : -20px;
+	bottom: 20px;
+}
+#secession{
+	float:right;
+	display:inline;
+}
+#user_id{
+	position : relative;
+	left : 10px;
+}
+#user_pw{
+	position : relative;
+	left : 28px;
+}

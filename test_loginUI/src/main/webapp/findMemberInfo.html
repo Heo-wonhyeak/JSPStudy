@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel ="stylesheet" href="loginWrite.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script type="text/javascript">
+	  	$(document).ready(function() {
+	    	$('#emailFrim').keypress(function (e) {
+				if(e.keyCode === 13) {
+					fn_email_submit();
+				}
+			});	//엔터키 실행
+		});
+	  	
+	  	function fn_email_submit() {
+			let popFrm = document.popFrm
+			let email = popFrm.email.value
+			
+			if(email.length == 0 || email=="") {
+				alert("이메일을 입력해주세요")
+			} else if(email == "ezen@gmail.com") {
+				popFrm.method = "post"		
+				popFrm.action = "emailSubmit.html"
+				popFrm.submit()
+			} else {
+				alert("이메일을 확인하세요")
+			}
+		}
+  	</script>
+	<title>신고하기창</title>
+</head>
+<body>
+	<div id="popup">
+			<h2 id="finder_sub">회원 정보 찾기</h2>
+			<div>
+				<p>회원가입시 등록하신 이메일 주소를 입력해 주세요.
+				<br/>해당 이메일로 아이디와 비밀번호 정보를 보내드립니다.</p>
+				
+			</div>
+			<div align = "center" id ="btnContainer">
+				<form action="#" name="popFrm" id="emailFrim">
+					<div id="Email">E-mail 주소<input type="text" name="Email" id="email" autofocus/></div>
+					<input type="button" id="emailSubmit" value="확인" onclick="fn_email_submit()"/>
+					<input type="button" id="closeBtn" value="창닫기" onclick="window.close()"/>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
