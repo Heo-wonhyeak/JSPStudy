@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>팝업</title>
+	<style type="text/css">
+		#container {
+			height : 80px;
+			border : 1px solid black;
+			padding : 5px;
+		}
+		#title {
+			position : relative;
+			top : -11px;
+			background-color: white;
+			width : 180px;
+		}
+		#problem {
+			margin : 8px;
+		}
+	</style>
+	<script type="text/javascript">
+		/* 팝업창 띄우기 */
+		function googlePopup() {
+			window.open("https://www.google.co.kr/","","width=350, height=300");
+		}
+		function androidPopup() {
+			window.open("https://www.android.com/","","width=350, height=300");
+		}
+		function applePopup() {
+			window.open("https://www.apple.com/","","width=350, height=300");
+		}
+	
+	</script>
+</head>
+<body>
+	<div id="problem">*라디오버튼을 클릭하면 원하는 사이트를 팝업창에 띄운다.(새로운창에 이동시킨다.)</div>
+	<div id="container">
+		<div id="title">원하는 사이트를 선택하세요</div>
+		<div>
+			<input type="radio" name="site" value="google" onclick="googlePopup()"/>구글<br/>
+			<input type="radio" name="site" value="android" onclick="androidPopup()"/>안드로이드<br/>
+			<input type="radio" name="site" value="apple" onclick="applePopup()"/>애플
+		</div>
+	</div>
+</body>
+</html>
