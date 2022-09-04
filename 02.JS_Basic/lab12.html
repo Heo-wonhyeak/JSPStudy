@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>논리연산자</title>
+</head>
+<body>
+    <pre>
+        <script>
+            let calculator;
+
+            //좌측 표현식의 평가가 false일 경우 우측 표현식은 실행되지 않음.
+            calculator && document.writeln('calculator.add(2,3) :' +calculator.add(2,3));
+
+            calculator = {
+                add : function (op1,op2) {
+                    return op1+op2;
+                }
+            }
+
+            calculator && document.writeln('calculator.add(2,3) :' +calculator.add(2,3));
+
+            let calc;
+            calc || document.writeln('calculator.add(2,3) :' +calculator.add(2,3));
+            calculator.substact || (calculator.substact = function (op1,op2) {return op1-op2;})
+            document.writeln('calculator.substact(10,5) : ' + calculator.substact(10,5) )
+
+        </script>
+    </pre>
+</body>
+</html>

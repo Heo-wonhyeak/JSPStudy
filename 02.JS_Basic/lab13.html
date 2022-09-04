@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기타 연산자</title>
+</head>
+<body>
+  <pre>
+    <script>
+      let arr = [1, '이순신' , '010-1234-5678',true , new Date(), [10,20,30]]
+
+      document.writeln('typeof arr[0] : '+typeof arr[0])
+      document.writeln('typeof arr[1] : '+typeof arr[1])
+      document.writeln('typeof arr[2] : '+typeof arr[2])
+      document.writeln('typeof arr[3] : '+typeof arr[3])
+      document.writeln('typeof arr[4] : '+typeof arr[4])
+      document.writeln('typeof arr[5] : '+typeof arr[5])
+      document.writeln()
+
+      document.writeln('arr[4] instanceof Date : ' + (arr[4] instanceof Date))
+      document.writeln('arr[4] instanceof Array : ' + (arr[5] instanceof Array))
+
+      document.writeln('arr : ' + arr)
+      document.writeln()
+
+      document.writeln('delete arr[2] :' + delete arr[2])
+      document.writeln('typeof arr[2] : '+typeof arr[2])
+      document.writeln('arr : ' + arr)
+      document.writeln()
+
+      let point = {
+          x : 20,
+          y : 30,
+          toString : function () {
+              return '{ x : ' + this.x+', y: '+this.y + '}'
+          }
+      }
+
+      document.writeln('point : ' + point);
+      document.writeln('delete point.y :' + delete point.y);
+      document.writeln('point : ' + point);
+      document.writeln('delete point.toString'+delete point.toString)
+      document.writeln('point : ' + point);
+    </script>
+  </pre>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>데이터 타입</title>
+    <!-- 기본형 데이터 타입
+     1. 숫자
+        1) 정수와 실수를 구분하지 않음
+     2. 문자열(string)
+     3. Boolean
+     4. null
+        1) 참조 타입과 함께 쓰여 어떠한 객체도 나타내지 않는 특수하 값
+     5. undefined
+     6. 배열(array)
+        1) 데이터 값들의 모음
+        2) zero-base 데이터
+     7. 객체(object)
+        1) 이름이 붙은 값들의 모음
+            - 프로퍼티라고 함.
+     8. 함수(function)
+     -->
+</head>
+<body>
+    <pre>
+    <script>
+        let num = 10;
+        let str = 'JavaScript';
+        let point = {x : 0 , y : 0};
+        let array = [1,2,'홍길동',,3.14,true];
+        let add = function (op1,op2) {
+            return op1+op2
+        }
+
+        document.writeln('num : '+num );
+        document.writeln('str : '+str);
+
+        document.writeln('point.x : '+point.x)
+        document.writeln('point["y"] : '+point["y"])
+
+        document.writeln('array[0] : '+array[0])
+        document.writeln('array[3] : '+array[3])
+
+        document.writeln('add : '+add)
+        document.writeln(add(2,3));
+    </script>
+        </pre>
+</body>
+</html>

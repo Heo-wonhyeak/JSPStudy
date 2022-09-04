@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>불린 리터럴</title>
+</head>
+<body>
+    <script>
+      let score = 88
+      let message = '불합격'
+
+      //score 값이 70점 이상인 경우 true , message 변수에 '합격'문자열 값을 저장하시오.
+
+      if(score >= 70) {
+          message = '합격'
+      }
+
+      document.writeln(score+'점은'+message+'입니다.')
+      document.writeln('<br/>')
+      document.writeln('<br/>')
+
+      //논리연산에서 0,undefined,null,NaN,"" 값은 false로 반환됨.
+      let a = 0;
+      let b = undefined;
+      let c = null
+      let d = NaN;
+      let e = ""
+
+      document.writeln('!0 : ',!a,'<br/>')
+      document.writeln('!undefined : ',!b,'<br/>')
+      document.writeln('!null : ',!c,'<br/>')
+      document.writeln('!NaN : ',!d,'<br/>')
+      document.writeln('!"" : ',!e,'<br/>')
+    </script>
+</body>
+</html>
