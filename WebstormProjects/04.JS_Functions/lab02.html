@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid & fontawesome</title>
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet" />
+    <link href="lab03.css" rel="stylesheet" />
+</head>
+<body>
+    <script>
+        console.log("test");
+        // alert("today is monday");
+
+        function numbering(i) {
+            for(let j=0; j<i;j++) {
+                console.log(j);
+            }
+        }
+        function red() {
+            //HTML 요소(element) 1개 검색/ 찾기
+            let buttonElement = document.querySelector("#red")
+            buttonElement.style.backgroundColor = "red"
+        }
+
+        //요소.addEventListener(이벤트,함수)
+        function event1() {
+            let btnElement = document.querySelector("#event1")
+            btnElement.addEventListener("click",function (ev) {
+                alert('clicked')
+            })
+        }
+    </script>
+    <div id = "top">
+        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+        <input type="search" value ="검색" />
+        <div>
+            <i class="fab fa-apple"></i>
+            <i class="fas fa-home"></i>
+            <i class="fab fa-telegram-plane"></i>
+            <i class="fas fa-compass"></i>
+            <i class="fas fa-drumstick-bite"></i>
+            <i class="fab fa-canadian-maple-leaf"></i>
+            <i class="fas fa-church"></i>
+            <i class="fas fa-chess"></i>
+            <i class="fas fa-camera-retro"></i>
+        </div>
+
+    </div>
+    <div>
+        <div id="eventTest">
+            <input type="button" id="btnClick" value ="click" onclick="alert('Hi~!')"/>
+        </div>
+    </div>
+    <p onclick="alert('today is tuesday')">
+        눌러보시오~
+    </p>
+
+    <input type="button" value="버튼" id="click"
+           onclick = "
+                        for(let i=0; i<5; i++) {
+                               console.log(i)
+                        }
+                        "/>
+    <input type="button" value="button" id="button" onclick="for(let i=0;i<5;i++)console.log(i)"/>
+    <input type="button" value="눌러요" id="push" onclick="numbering(5)"/>
+    <input type="button" value="버튼" id="red" onclick="red()" />
+    <input type="button" value="button" id="event1" onclick="event1()"/>
+</body>
+</html>

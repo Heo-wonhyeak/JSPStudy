@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try...catch...finally</title>
+</head>
+<body>
+  <script>
+    let x = 5;
+    let result
+
+    try {
+        document.writeln('\u2460 <br/>')
+        result = x*y;
+        document.writeln('\u2461 <br/>')
+    } catch(e) {
+        document.writeln('\u2462' +
+            e+' <br/>')
+    } finally {
+        document.writeln('\u2463')
+    }
+    document.writeln('<br/>')
+    document.writeln('<br/>')
+
+    try {
+        document.writeln('\u2460 <br/>')
+        result = x/ 0
+        document.writeln('\u2461' +result +'<br/>')
+        throw new Error('0으로 나눌 수 없습니다.')
+    } catch(e) {
+        document.writeln('\u2462' +
+            e+' <br/>')
+    } finally {
+        document.writeln('\u2463')
+    }
+    document.writeln('<br/>')
+  </script>
+</body>
+</html>

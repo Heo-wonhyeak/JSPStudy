@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    리터럴(Literal)
+        - 프로그램 코드 상 데이터의 값을 표현하는 방식
+        - 숫자 리터럴, 문자열 리터럴, 배열 리터럴, 객체 리터럴, 함수 리터럴, 불린 리터럴, undefined/null 리터럴
+
+    숫자 리터럴
+        1) 상수
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>숫자리터럴</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+
+        document.writeln('a: '+a +'<br/>')
+        document.writeln('typeof a : '+(typeof a)+'<br/>')
+        document.writeln('isFinite(a) : '+isFinite(a)+'<br/>')
+        document.writeln('inNaN(a) : '+isNaN(a)+'<br/>')
+        document.writeln('<br/>')
+
+        let b = 1/0
+        document.writeln('b: '+b +'<br/>')
+        document.writeln('typeof b : '+(typeof b)+'<br/>')
+        document.writeln('isFinite(b) : '+isFinite(b)+'<br/>')
+        document.writeln('inNaN(b) : '+isNaN(b)+'<br/>')
+        document.writeln('<br/>')
+
+        let c = 5*'4times'
+        document.writeln('c: '+c +'<br/>')
+        document.writeln('typeof c : '+(typeof c)+'<br/>')
+        document.writeln('isFinite(c) : '+isFinite(c)+'<br/>')
+        document.writeln('inNaN(c) : '+isNaN(c)+'<br/>')
+        document.writeln('<br/>')
+
+
+    </script>
+</body>
+</html>

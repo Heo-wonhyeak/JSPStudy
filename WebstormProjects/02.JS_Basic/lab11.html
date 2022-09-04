@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>비교연산자</title>
+</head>
+<body>
+  <pre>
+    <script>
+      let x=5;
+      let y= 3;
+      let z = '5';
+
+      // == 연산자 : 문자열과 숫자를 비교할 경우, 숫자가 문자열로 변환되어 비교연산 수행
+      document.writeln('x == y : ' + (x==y));
+      document.writeln(' x==z : ' + (x==z));
+
+      // === 연산자 : 비교 연산시 데이터 타입 변환은 수행하지 않음
+      document.writeln(' x===z : ' + (x===z));
+      document.writeln(' x!==z : ' + (x!==z));
+      document.writeln('x !== y : ' + (x!==y))
+
+      let arr1 = ['홍길동','이순신','신사임당']
+      let arr2 = ['홍길동','이순신','신사임당']
+
+      document.writeln('arr1 == arr2 :' +(arr1 == arr2));
+      document.writeln('arr1 === arr2 :' +(arr1 === arr2));
+    </script>
+  </pre>
+</body>
+</html>

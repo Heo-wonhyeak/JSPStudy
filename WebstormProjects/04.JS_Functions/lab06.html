@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 핸들러 등록과 이벤트 처리</title>
+    <script>
+        //추가 버튼 클릭시 이 함수를 호출함
+        function add() {
+            //id 속성 값 siteName,URLName,result 인 엘리먼트를 찾아 참조함
+            let siteNameElement = document.getElementById('siteName')
+            let URLElement = document.getElementById('URL')
+            let resultElement = document.getElementById('result')
+
+            //<a></a> 엘리먼트 생성
+            let anchorElement = document.createElement('a')
+
+            //<a href="URL 입력값 삽입"> </a> URLElement 활용
+            anchorElement.href = URLElement.value
+
+            //새로운 텍스트 노드 생성.
+            let newTextNode = document.createTextNode(siteNameElement.value)
+
+            //<a></a> 엘리먼트의 자식 노드로 새로운 텍스트 노드 추가           <a>siteName 입력값 삽입</a> siteNameElement
+            anchorElement.appendChild(newTextNode)
+
+            // <br/>엘리멘트 생성
+            let brElement = document.createElement('br')
+
+            // result 의 자식노드로 anchorElement,brElement 를 추가함.
+            resultElement.appendChild(anchorElement)
+            resultElement.appendChild(brElement)
+
+            //입력필드 초기화
+            siteNameElement.value = ''
+            URLElement.value = ''
+        }
+        function  cancel() {
+            //id 속성 값 siteName,URLName,result 인 엘리먼트를 찾아 참조함
+            let siteNameElement = document.getElementById('siteName')
+            let URLElement = document.getElementById('URL')
+
+            //입력필드 초기화
+            siteNameElement.value = ''
+            URLElement.value = ''
+        }
+        //html 문서가 파싱되고 외부 컨텐츠 로딩이 완료되면 웹브라우저에서는 load 이벤트 발생함
+
+        // 이벤트 핸들러로 등록된 함수가 실행됨.
+
+        //htmlElement.이벤트핸들러 프로퍼티명 = function() { }
+        //or htmlElement.이벤트핸들러 프로퍼티명 = 함수명 [선언만 하고 함수는 따로 정의]
+        window.onload = function () {
+            let btnAddElement = document.getElementById('btnAdd')
+            let btnCancelElement = document.getElementById('btnCancel')
+            btnAddElement.onclick = add;
+            btnCancelElement.onclick = cancel;
+        }
+    </script>
+</head>
+<body>
+  <form>
+      <label>
+          웹 사이트 : <br/>
+          <input type="text" id="siteName" size="50"/> <br/>
+      </label>
+      <label>
+          URL : <br/>
+          <input type="text" id="URL" size="50"/> <br/>
+      </label>
+        <br/>
+      <input type="button" id="btnAdd" value="추가" />
+      <input type="button" id="btnCancel" value="취소"/>
+  </form>
+
+  <div id = "result">
+
+  </div>
+</body>
+</html>

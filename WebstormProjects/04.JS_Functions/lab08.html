@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        div {
+            font-size : 20px;
+        }
+        .header {
+            color : coral;
+            font-size : 30px;
+        }
+        .content {
+            background-color: aqua;
+            width: auto;
+        }
+        .footer {
+            color : red;
+            font-size : 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#header').addClass('header')
+            $('#content').addClass('content')
+            $('#footer').addClass('footer')
+        })
+    </script>
+</head>
+<body>
+  <div id="header">
+      <p>jQuery</p>
+  </div>
+
+  <div id="content">
+      <p>jQuery(제이쿼리)는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리다.<br/> 존 레식이 2006년 뉴욕 시 바캠프(Barcamp NYC)에서 공식적으로 소개하였다.<br/>
+
+        jQuery는 MIT 라이선스를 가진 자유 오픈 소프트웨어이다.[1]<br/> jQuery의 문법은 코드 보기, 문서 객체 모델 찾기, 애니메이션 만들기, 이벤트 제어, Ajax 개발을 쉽게 할 수 있도록 디자인되었다.<br/> 또한, jQuery는 개발자가 플러그인을 개발할 수 있는 기능을 제공한다.
+
+        마이크로소프트와 노키아는 자사 플랫폼에 jQuery를 포함하는 계획을 발표한 바 있다.<br/>[2] 마이크로소프트는 비주얼스튜디오[3]의 ASP.NET AJAX 프레임워크와 ASP.NET MVC 프레임워크에 적용했고,<br/> 노키아는 자사의 런타임 웹 위젯 개발 플랫폼에 통합하였다.[4]
+      </p>
+  </div>
+
+    <div id="footer">
+        <p>
+            Copyright by EZEN. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>

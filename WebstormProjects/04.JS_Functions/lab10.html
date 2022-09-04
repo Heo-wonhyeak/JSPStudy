@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 이벤트</title>
+    <style>
+      .test{
+        border : solid black 1px;
+          padding : .5em;
+      }
+      .active {
+          color : #900;
+          font-weight : bold;
+      }
+      .inside {
+          background-color: aquamarine;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div.test").on({
+                click: function () {
+                    $(this).toggleClass("active")
+                },
+                mouseenter : function () {
+                    $(this).addClass("inside")
+                    $(this).text("mouseenter")
+                },
+                mouseleave : function () {
+                    $(this).removeClass("inside")
+                    $(this).text("mouseleave")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="test">ezen!</div>
+</body>
+</html>

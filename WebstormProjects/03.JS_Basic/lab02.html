@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch 문</title>
+</head>
+<body>
+  <pre>
+    <script>
+      let month = 5;
+      let days;
+
+      switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          days = 30;
+          break;
+        case 2:
+          days = 28;
+          break;
+          default:
+              days = 31;
+      }
+      document.writeln(`${month}월은 ${days}일 까지 있습니다.`);
+    </script>
+  </pre>
+</body>
+</html>

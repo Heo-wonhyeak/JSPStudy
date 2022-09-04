@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+    for(초기식; 조건식; 증감식;) {
+
+    }
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for 문</title>
+</head>
+<body>
+  <pre>
+    <script>
+        let arr2d = [
+            ['허원혁','송미진','이주현'],
+            ['김나현','김형준','임일주'],
+            ['김선명','홍복기','황건하']
+        ]
+        for(let i = 0; i<arr2d.length;i++) {
+            for(let j=0; j<arr2d[i].length;j++) {
+                document.writeln(arr2d[i][j])
+            }
+        }
+        document.writeln(
+        )
+
+        let a = [2,3,5,7,11,13]
+        for(let i = (a.length-1); i>=0; i--) {
+            document.writeln(a[i])
+        }
+        document.writeln()
+        /*
+            for of 루프
+                - 배열이나 문자열에 사용함.
+         */
+        let arr = [,2,,4]
+        arr[9] = 100;
+        for (const element of arr) {
+            document.writeln(element)
+        }
+        document.writeln()
+        for( element of arr2d) {
+            document.writeln(element)
+        }
+        document.writeln()
+        let greeting = 'Hello Ezen'
+        for(const c of greeting)
+            document.writeln(c)
+
+        /*
+            for in 루프
+                -
+         */
+        let obj = {name : '이순신' , age :40}
+        for (const key in obj) {
+            console.log(`${key} : ${obj[key]}`)
+        }
+        let number = [1,2,,4]
+        number[99] = 100;
+        for (const i of number) {
+            console.log(`${i} : ${number[i]}`)
+        }
+        for (const i in number) {
+            console.log(`${i} : ${number[i]}`)
+        }
+        console.log('\n')
+    </script>
+  </pre>
+</body>
+</html>

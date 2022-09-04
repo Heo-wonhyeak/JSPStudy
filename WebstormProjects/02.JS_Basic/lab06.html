@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 리터럴</title>
+</head>
+<body>
+    <script>
+      // 객체 리터럴
+      let p1 = {x:300,y:200}
+      let p2 = {x:350,y:280}
+      let rectangle = {
+          topLeft : p1,
+          bottomRight : p2,
+          size : function () {
+             /* return ((p2.x-p1.x)*(p2.y-p1.y)) */
+              return(this.bottomRight.x-this.topLeft.x)*(this.bottomRight.y-this.topLeft.y)
+          }
+      }
+
+      document.writeln('직사각형의 넓이 : ' , rectangle.size(),'<br/>')
+      document.writeln('<br/>')
+      p1 = {x:200,y:300}
+      p2 = {x:300,y:400}
+
+      rectangle.bottomRight = p2
+      rectangle.topLeft = p1
+
+      document.writeln('위치 변경 후의 직사각형의 넓이 : ' , rectangle.size())
+      document.writeln('<br/>')
+    </script>
+</body>
+</html>

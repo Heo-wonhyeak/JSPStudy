@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>산술연산자</title>
+</head>
+<body>
+  <pre>
+    <script>
+      let num = 20
+      let str = '20'
+      let bool = true
+      let obj = {}
+
+      //피 연산자가 숫자일 경우 덧셈 연산을 행함.
+      document.writeln('num+13 : ',(num+13))
+      document.writeln()
+
+      //피연산자가 불린일 경우 true 는 1로 false는 0으로 반환됨.
+      document.writeln('num+bool : ', num+bool)
+      document.writeln('num+!bool : ', num+!bool)
+      document.writeln()
+
+      //피 연산자의 한쪽이 문자열인경우 나머지 피 연산자도 문자열로 변환되어 문자열 접합연산을 행함.
+      document.writeln('num+str : ',num+str)
+
+      // 피 연산자 한쪽이 객체인 경우 문자열로 변환되고
+      // 나머지 피연산자도 문자열로 변환되어 문자열 접합 연산을 행함.
+      document.writeln(obj+10);
+
+      // 후치 증가 연산 : 먼저 피연산자의 값을 반환하고, 피 연산자의 값을 1 증가시킴.
+      let x = 3;
+      let y = x++;
+      document.writeln('x : ' + x)
+      document.writeln('y : ' + y)
+      document.writeln()
+
+      x= 3;
+      document.writeln('x : ' + x)
+      y = ++x;
+      document.writeln('y : ' + y)
+
+    </script>
+  </pre>
+</body>
+</html>

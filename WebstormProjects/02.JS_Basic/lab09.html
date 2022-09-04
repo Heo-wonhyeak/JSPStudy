@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>undefined</title>
+</head>
+<body>
+    <pre>
+        <script>
+            let a;              //undefined 값 할당
+            let obj = {}        //프로퍼티가 없는 빈 객체 생성
+
+            document.writeln('a : '+a)
+            document.writeln('obj : ' +obj)
+            document.writeln('obj.prop : ' +obj.prop)
+
+            obj = null;         //객체 참조를 제거함.
+            document.writeln()
+            document.writeln('obj : ' +obj)
+            document.writeln()
+
+            if(!a)
+                document.writeln('변수 a는 초기화가 필요합니다.')
+
+            if(!obj)
+                document.writeln('변수 Obj는 참조 객체가 필요합니다.')
+
+        </script>
+    </pre>
+</body>
+</html>

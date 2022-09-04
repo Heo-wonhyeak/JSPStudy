@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 등록 - one()</title>
+    <style>
+      div{
+          width : 60px;
+          height : 60px;
+          margin : 5px;
+          float : left;
+          border : 5px outset;
+          background-color: gold;
+          cursor : pointer;
+      }
+      p {
+          color : red;
+          margin : 0;
+          clear : left;
+      }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let n = 0;
+            $('div').one('click',function () {
+                let index = $('div').index(this)
+                $(this).css({
+                    borderStyle : "inset",
+                    cursor: "auto",
+
+                })
+                $('p').text((index+1) + '번 인덱스에 있는 div가 클릭되었습니다. (총 '+(++n)+')')
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>상자를 클릭하세요</p>
+</body>
+</html>

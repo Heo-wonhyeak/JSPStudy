@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 셀렉터</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            font-size : 20px;
+            line-height: 16px;
+        }
+        .header {
+            color : coral;
+            font-size : 30px;
+        }
+        .content {
+            color: aqua;
+            width: auto;
+        }
+        .footer {
+            color : deeppink;
+            font-size : 15px;
+        }
+        .evenItem {
+            background-color: navy;
+            color : white;
+        }
+        .oddItem {
+            background-color: yellow;
+            color : red;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#header').addClass('header')
+            $('#content').addClass('content')
+            $('#footer').addClass('footer')
+
+            $('#list > div:nth-child(2n)').addClass('evenItem')
+            $('#list > div:nth-child(2n+1)').addClass('oddItem')
+
+            let $element = $('#list > div')
+
+            $('#message').text('앞으로의 강좌' + $element.length +'건')
+
+            let resultStr = ''
+
+            let str = $('<h4>강좌</h4>').appendTo('#result')
+            $element.each(function (index, element) {
+                resultStr = (index+1)+'.' +$(element).text()
+                $('#result').append(resultStr)
+                $('#result').append('<br/>')
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <p>jQuery Selector</p>
+    </div>
+
+    <div id="content">
+        <div>
+            <p id="message"></p>
+        </div>
+        <div id="list">
+            <div>JSP</div>
+            <div>Spring</div>
+            <div>SpringBoot</div>
+            <div>Kotlin</div>
+            <div>AWS</div>
+        </div>
+        <div>
+            <p id="result"></p>
+        </div>
+        <div id="footer">
+            <p id="">Copyright by EZEN. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

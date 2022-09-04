@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>   <!-- 이거 넣어야 자동으로 ln 줄변경-->
+        <script type="text/javascript">
+            document.writeln("Hello JS");
+            document.write("&lt;script&gt;"+'태그 아래의 인라인 스크립트에 의한 출력임',' 인라인 스크립트 방식.')
+        </script>
+    </pre>
+
+    <!-- 외부스크립트와 인라인 스크립트 동시 출력 불가 -->
+    <script src="lab01.js">
+        document.writeln('외부 스크립트 사용시 인라인 내용은 출력되지 않는다.')
+    </script>
+</body>
+</html>
