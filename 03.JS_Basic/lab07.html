@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for in 루프</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {name : '을지문덕' , age : 50},
+            {name : '연개소문' , age : 35},
+            {name : '광개토대왕', age : 20},
+            {name : '세종대왕' , age : 28},
+            {name : '김유신' , age : 46},
+            {name : '계백' , age : 32}
+        ]
+
+        for(const idx in arr) {
+            document.writeln('{')
+            for (const prop in arr[idx]){
+                document.writeln(`${prop} : ${arr[idx][prop]}`)
+                if(prop == 'age')
+                    break
+                document.writeln(',')
+            }
+            document.writeln('}'+'<br/>')
+        }
+    </script>
+</body>
+</html>

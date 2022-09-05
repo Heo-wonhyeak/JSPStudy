@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if 문</title>
+</head>
+<body>
+  <pre>
+    <script>
+      let score = 88;
+      let level;
+
+      if(score >= 90) {
+          level = 'A'
+      } else if (score >= 80) {
+          level = 'B'
+      } else if (score >=70 ) {
+          level = 'C'
+      } else if (score >= 60) {
+          level = 'D'
+      } else {
+          levle = 'F'
+      }
+
+      document.writeln(score+'점은 '+level+'level 입니다.')
+      document.writeln(`${score} 점은 ${level} level 입니다.`)
+    </script>
+  </pre>
+</body>
+</html>
