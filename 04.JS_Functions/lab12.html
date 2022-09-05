@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 취소, 이벤트 전파 차단</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div .card {
+            background: coral;
+            width : 30px;
+            height: 40px;
+            margin : 2px;
+            float : left;
+            line-height: 2;
+            text-align: center;
+            font-weight: bold;
+            display : none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#show').click(function () {
+                $('div.card').first().show("fast", function showCard() {
+                    $(this).next("div.card").show("fast",showCard)
+                })
+            })
+            $("#hide").click(function () {
+                $("div.card").last().hide("fast", function hideCard(){
+                    $(this).prev("div .card").hide("fast",hideCard)
+                })
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <div>
+      <button id="show">보이기</button>
+      <button id="hide">감추기</button>
+    </div>
+    <div>
+      <div class="card">1</div>
+      <div class="card">2</div>
+      <div class="card">3</div>
+      <div class="card">4</div>
+      <div class="card">5</div>
+    </div>
+</body>
+</html>

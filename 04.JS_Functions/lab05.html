@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--
+    DOM HTML API 를 이용한 HTML 문서요소 접근 및 조작
+        - 용도 :  문서 순회
+            - Node.childNodes : Node 객체의 배열 객체처럼 작동하는 NodeList 객체로
+              자식노드 객체들에 대한 참조를 갖고있음.(NodeListOf<ChildNode>)
+        - 용도 : 문서 내 요소 찾기
+            -
+-->
+    <script>
+        // 노드 객체의 모든 자식노드중 노드타입이 element인 노드의 이름을 출력함.
+        function printTags(node) {
+            let tags = '';
+
+            // 노드타입이 엘리멘트인지 검사함
+                if(node.nodeType == Node.ELEMENT_NODE) {
+                    tags += node.nodeName+ '<br/>';
+                }
+
+            // 자식노드 객체들에 대한 NodeList 객체 저장
+                let children = node.childNodes;
+
+            // NodeList 객체의 length 프로퍼티를 이용해 printTags 함수를 재귀호출
+                for(let i=0; i<children.length;i++) {
+                    tags += printTags(children[i]);
+                }
+
+            return tags;
+        }
+
+        // HTML 문서가 파싱되고 외부 컨텐츠 로딩이 완료되면 웹 브라우저는 load 이벤트를 발생함.
+        // 이때 load 이벤트의 이벤트 핸들러로 등록된 함수가 생성됨.
+        window.onload = function () {
+            let result = document.getElementById('result');
+            result.innerHTML = printTags(document);
+        }
+    </script>
+    <style>
+        #result {
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+#top {
+    display : grid;
+    grid-template-columns: 4fr 7fr 4fr;
+    height : 30px;
+    border-bottom: solid gray 0.1px;
+    margin-bottom: 10px;
+}
+#top img {
+    margin-left: auto;
+    margin-right: auto;
+    height : 100%;
+    object-fit: contain;
+}
+
+#top input {
+    height: 60%;
+    width : 95%;
+
+    margin: auto;
+
+    text-align: center;
+    background-color : greenyellow;
+
+    border : solid 1px black;
+    border-radius: 3px;
+
+    font-size:10px;
+    font-weight: 100;
+}
+
+#top i {
+    font-size: 25px;
+    color : crimson;
+}
+#top .fa-camera-retro {
+    color : silver;
+}
+#top .fa-home {
+    color : black;
+}
+#top .fa-chess {
+    color : deeppink;
+}
+#top .fa-church {
+    color : coral;
+}
+#top .fa-drumstick-bite {
+    color : brown;
+}
+#top .fa-telegram-plane {
+    color : mediumpurple;
+}
+#top .fa-compass {
+    color : cornflowerblue;
+}
+
+#top div {
+    text-align: center;
+    padding-top : 3px;
+}
+
+#eventTest {
+    display : grid;
+    grid-template-rows: 1fr 1fr;
+    height : 50px;
+}
+
+#btnClick {
+    height : 80%;
+    width : 95%;
+
+    font-size : 10px;
+    background : white;
+    border : solid gray 1px;
+    border-radius: 2px;
+}
+#button {
+    height : 100%;
+    width : 95%;
+
+    font-size : 10px;
+    background : yellow;
+    border : solid gray 1px;
+    border-radius: 2px;
+}
+#push {
+    height : 100%;
+    width : 95%;
+
+    font-size : 20px;
+    background : bisque;
+    border : solid gray 1px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+

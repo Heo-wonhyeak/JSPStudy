@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fader</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fadeIn').click(function () {
+                $('#image').fadeIn(3000);
+            })
+            $('#fadeOut').click(function () {
+                $('#image').fadeOut(1500);
+            })
+        })
+    </script>
+    <style>
+        .picture{
+            color : #AAAAAA;
+            border : 1px solid #444444;
+            width : 302px;
+            height: 400px;
+        }
+        #image{
+            position : relative;
+            width : 302px;
+            height: 400px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="picture">
+        <img src="alaskan_malamute.jpg" alt="alaskan_malamute" id="image"/>
+    </div>
+    <div>
+        <button id="fadeIn">fadeIn</button>
+        <button id="fadeOut">fadeOut</button>
+    </div>
+</body>
+</html>

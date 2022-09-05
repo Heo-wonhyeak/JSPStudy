@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sliding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {width : 360px;}
+        .header {color : blue; font-size : 30px;}
+        .contents{color : #008000;}
+        .footer{color : red;}
+        #menubar {width : 360px;}
+        #menubar, #menubar .submenuItem {
+            text-indent: 10px;
+            list-style: none;
+            padding : 0;
+        }
+        li.menu {
+            margin-bottom: 2px;
+        }
+        div.menuItem {
+            height: 32px;
+            line-height: 2;
+            background-color: yellowgreen;
+            color :  white;
+            font-weight: bold;
+            cursor : pointer;
+        }
+        div.menuItem li {
+            height: 32px;
+            line-height: 2;
+            background-color: #f5f5dc;
+            cursor : pointer;
+        }
+        .submenuItem li a {
+            color : black;
+            text-decoration: none;
+            overflow : hidden;
+            display: block;
+            width : 100%;
+            height: 100%;
+        }
+        .submenuItem li:hover {
+            background-color: #f0e68c;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#header').addClass('header');
+            $('#contents').addClass('contents');
+            $('#footer').addClass('footer');
+
+            $('ul.submenuItem').hide();
+            $('div.menuItem').bind('click', function () {
+                if($(this).next().css('display') == 'none') {
+                    $('.submenuItem').slideDown()
+                } else {
+                    $('.submenuItem').slideUp()
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <p>jQuery Effect</p>
+    </div>
+    <div id="contents">
+        <ul id="menubar">
+            <li class="menu">
+                <div class="menuItem">분석</div>
+                <ul class="submenuItem">
+                    <li><a href="#">AS-IS : 기존 시스템</a></li>
+                    <li><a href="#">TO-BE : 앞으로 만들 시스템</a></li>
+                    <li><a href="#">벤치마킹(Bench-Marking)</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <div class="menuItem">설계(Archetecture)</div>
+                <ul class="submenuItem">
+                    <li><a href="@">화면설계서(SB,Story Board)</a></li>
+                    <li><a href="@">메인프로토타입</a></li>
+                    <li><a href="@">DB table</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <div class="menuItem">개발</div>
+                <ul class="submenuItem">
+                    <li><a href="#">frontend</a></li>
+                    <li><a href="#">backend</a></li>
+                    <li><a href="#">application</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <div class="menuItem">화면설계서의 구성요소</div>
+                <ul class="submenuItem">
+                    <li><a href="@">수정 이력 관리</a></li>
+                    <li><a href="@">기획의도</a></li>
+                    <li><a href="@">프로세스 플로우차트</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <div class="menuItem">화면설계서</div>
+                <ul class="submenuItem">
+                    <li><a href="#">개발 범위 화면 목록(IA)</a></li>
+                    <li><a href="#">와이어프레임</a></li>
+                    <li><a href="#">디스크립션</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Copyright &copy; by EZEN. All rights reserved.</p>
+    </div>
+</body>
+</html>
